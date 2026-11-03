@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <script>document.documentElement.classList.add('js');</script>
   
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="d-flex flex-column min-vh-100">
 
@@ -50,15 +50,15 @@
     <section class="bagian">
       <div class="container"><div class="row g-4 g-lg-5">
         <div class="col-12 col-md-4 reveal"><div class="card kartu-nb galeri h-100">
-          <div class="bingkai"><img alt="Diskusi dan wawancara tim di pangkalan Gas LPG" src="foto2.jpeg"></div>
+          <div class="bingkai"><img alt="Diskusi dan wawancara tim di pangkalan Gas LPG" src="assets/foto2.jpeg"></div>
           <div class="card-body"><h2 class="h5 mb-1">Sesi Diskusi & Wawancara tim di lapangan</h2><p class="redup mb-0">Menjelaskan temuan awal dan berdiskusi intensif bersama rekan tim di lokasi Pangkalan Gas LPG untuk menyelaraskan pemahaman, menganalisis kebutuhan operasional, serta merumuskan solusi sistem yang tepat.</p></div>
         </div></div>
         <div class="col-12 col-md-4 reveal"><div class="card kartu-nb galeri h-100">
-          <div class="bingkai"><img alt="Program sistem informasi" src="foto3.jpeg"></div>
+          <div class="bingkai"><img alt="Program sistem informasi" src="assets/foto3.jpeg"></div>
           <div class="card-body"><h2 class="h5 mb-1">Pengembangan Sistem Informasi</h2><p class="redup mb-0">Tahap perancangan dan implementasi kode program untuk membangun sistem informasi manajemen penjualan gas yang responsif dan sesuai kebutuhan mitra.</p></div>
         </div></div>
         <div class="col-12 col-md-4 reveal"><div class="card kartu-nb galeri h-100">
-          <div class="bingkai"><img alt="Foto Bersama tim" src="foto4.jpeg"></div>
+          <div class="bingkai"><img alt="Foto Bersama tim" src="assets/foto4.jpeg"></div>
           <div class="card-body"><h2 class="h5 mb-1">Dokumentasi Bersama Tim di Lokasi</h2><p class="redup mb-0">Foto bersama seluruh anggota tim di lokasi mitra pangkalan gas setelah menyelesaikan observasi lapangan, pengumpulan data, dan perancangan awal sistem.</p></div>
         </div></div>
       </div></div>
@@ -81,20 +81,6 @@
   </footer>
 
   <script src="js/bootstrap.bundle.min.js"></script>
-  <script>
-    document.getElementById('tahun').textContent = new Date().getFullYear();
-   
-    var io = new IntersectionObserver(function (daftar) {
-      daftar.forEach(function (i) { if (i.isIntersecting) { i.target.classList.add('tampil'); io.unobserve(i.target); } });
-    }, { threshold: .15 });
-    document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
-    
-    window.onload = function () {
-      var gaya = getComputedStyle(document.documentElement), pesan = '';
-      if (!gaya.getPropertyValue('--bs-blue') || typeof bootstrap === 'undefined') pesan = 'Bootstrap belum termuat. Periksa nama file di folder css/ dan js/.';
-      else if (!gaya.getPropertyValue('--navy')) pesan = 'style.css belum termuat. Pastikan style.css satu folder dengan file HTML.';
-      if (pesan) document.body.insertAdjacentHTML('beforeend', '<div style="position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#b00020;color:#fff;padding:12px">' + pesan + '</div>');
-    };
-  </script>
+  <script src="js/script.js"></script>
 </body>
 </html>
