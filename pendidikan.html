@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <script>document.documentElement.classList.add('js');</script>
   
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="d-flex flex-column min-vh-100">
 
@@ -83,20 +83,6 @@
   </footer>
 
   <script src="js/bootstrap.bundle.min.js"></script>
-  <script>
-    document.getElementById('tahun').textContent = new Date().getFullYear();
-    
-    var io = new IntersectionObserver(function (daftar) {
-      daftar.forEach(function (i) { if (i.isIntersecting) { i.target.classList.add('tampil'); io.unobserve(i.target); } });
-    }, { threshold: .15 });
-    document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
-    
-    window.onload = function () {
-      var gaya = getComputedStyle(document.documentElement), pesan = '';
-      if (!gaya.getPropertyValue('--bs-blue') || typeof bootstrap === 'undefined') pesan = 'Bootstrap belum termuat. Periksa nama file di folder css/ dan js/.';
-      else if (!gaya.getPropertyValue('--navy')) pesan = 'style.css belum termuat. Pastikan style.css satu folder dengan file HTML.';
-      if (pesan) document.body.insertAdjacentHTML('beforeend', '<div style="position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#b00020;color:#fff;padding:12px">' + pesan + '</div>');
-    };
-  </script>
+  <script src="js/script.js"></script>
 </body>
 </html>
