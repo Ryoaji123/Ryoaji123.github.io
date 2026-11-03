@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <script>document.documentElement.classList.add('js');</script>
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="d-flex flex-column min-vh-100">
 
@@ -70,7 +70,7 @@
               <p class="redup">- Testing & Troubleshooting: Menganalisis kendala teknis serta melakukan pengujian koneksi (bandwidth/latency) dan kualitas tampilan kamera pasca-instalasi.</p>
               <p class="redup">- Dokumentasi & Maintenance: Pemeliharaan berkala pada perangkat jaringan serta pembuatan dokumentasi pemetaan jalur kabel.</p>
               <!-- Taruh file PDF di folder yang sama dengan proyek.html, lalu samakan nama filenya di bawah -->
-              <a href="Instalasi.pdf" class="btn btn-nb btn-putih btn-sm mt-auto align-self-start" target="_blank" rel="noopener">Lihat Proyek</a>
+              <a href="assets/Instalasi.pdf" class="btn btn-nb btn-putih btn-sm mt-auto align-self-start" target="_blank" rel="noopener">Lihat Proyek</a>
             </div>
           </div></div>
         </div>
@@ -82,7 +82,7 @@
         <h2 class="judul reveal">Sertifikat <span aria-hidden="true">🏅</span></h2>
         <div class="row justify-content-center g-4">
           <div class="col-12 col-sm-8 col-md-6 col-lg-4 reveal"><div class="card kartu-nb h-100">
-            <div class="sertifikat"><img alt="Sertifikat kompetensi Junior Network Administrator 2025" src="foto5.jpeg"></div>
+            <div class="sertifikat"><img alt="Sertifikat kompetensi Junior Network Administrator 2025" src="assets/foto5.jpeg"></div>
             <div class="card-body"><h3 class="h5 mb-1">CERTIFICATE OF COMPETENCE</h3><p class="redup mb-0">Junior Network Administrator, 2025</p></div>
           </div></div>
         </div>
@@ -106,20 +106,6 @@
   </footer>
 
   <script src="js/bootstrap.bundle.min.js"></script>
-  <script>
-    document.getElementById('tahun').textContent = new Date().getFullYear();
- 
-    var io = new IntersectionObserver(function (daftar) {
-      daftar.forEach(function (i) { if (i.isIntersecting) { i.target.classList.add('tampil'); io.unobserve(i.target); } });
-    }, { threshold: .15 });
-    document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
-  
-    window.onload = function () {
-      var gaya = getComputedStyle(document.documentElement), pesan = '';
-      if (!gaya.getPropertyValue('--bs-blue') || typeof bootstrap === 'undefined') pesan = 'Bootstrap belum termuat. Periksa nama file di folder css/ dan js/.';
-      else if (!gaya.getPropertyValue('--navy')) pesan = 'style.css belum termuat. Pastikan style.css satu folder dengan file HTML.';
-      if (pesan) document.body.insertAdjacentHTML('beforeend', '<div style="position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#b00020;color:#fff;padding:12px">' + pesan + '</div>');
-    };
-  </script>
+  <script src="js/script.js"></script>
 </body>
 </html>
