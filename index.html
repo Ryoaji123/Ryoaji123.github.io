@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <script>document.documentElement.classList.add('js');</script>
   
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="d-flex flex-column min-vh-100">
 
@@ -44,13 +44,13 @@
           <p class="lead redup" style="max-width: 34rem;">Mahasiswa Sistem Informasi yang sedang mendalami analisis sistem bisnis serta pemrograman web dan basis data. 
             Bertekad menjadi System Analyst yang tidak hanya paham kebutuhan bisnis, tapi juga andal dalam mengeksekusi kode program.</p>
           <div class="d-flex flex-column flex-sm-row gap-3">
-            <a href="CV-Ryo-Ajisaputra.pdf" class="btn btn-lg btn-nb btn-biru">Lihat CV</a>
+            <a href="assets/CV-Ryo-Ajisaputra.pdf" class="btn btn-lg btn-nb btn-biru">Lihat CV</a>
             <a href="kontak.html" class="btn btn-lg btn-nb btn-putih">Hubungi Saya</a>
           </div>
         </div>
         <div class="col-lg-5 order-1 order-lg-2 reveal">
           <div class="foto-wrap">
-            <div class="foto-blob"><img alt="Foto Ryo Ajisaputra" src="foto.jpeg"></div>
+            <div class="foto-blob"><img alt="Foto Ryo Ajisaputra" src="assets/foto.jpeg"></div>
           </div>
         </div>
       </div></div>
@@ -150,15 +150,15 @@
         <h2 class="judul reveal">Foto <span aria-hidden="true">📸</span></h2>
         <div class="row g-4 g-lg-5">
         <div class="col-12 col-md-4 reveal" style="--tunda: 0s;"><div class="card kartu-nb galeri h-100">
-          <div class="bingkai"><img alt="Diskusi dan wawancara tim di Pangkalan Gas LPG Tarmin" src="foto2.jpeg"></div>
+          <div class="bingkai"><img alt="Diskusi dan wawancara tim di Pangkalan Gas LPG Tarmin" src="assets/foto2.jpeg"></div>
           <div class="card-body"><h3 class="h6 mb-0">Sesi Diskusi &amp; Wawancara Tim di Lapangan</h3></div>
         </div></div>
         <div class="col-12 col-md-4 reveal" style="--tunda: 0.1s;"><div class="card kartu-nb galeri h-100">
-          <div class="bingkai"><img alt="Layar laptop berisi kode program sistem informasi" src="foto3.jpeg"></div>
+          <div class="bingkai"><img alt="Layar laptop berisi kode program sistem informasi" src="assets/foto3.jpeg"></div>
           <div class="card-body"><h3 class="h6 mb-0">Pengembangan Sistem Informasi</h3></div>
         </div></div>
         <div class="col-12 col-md-4 reveal" style="--tunda: 0.2s;"><div class="card kartu-nb galeri h-100">
-          <div class="bingkai"><img alt="Foto bersama tim di depan pangkalan gas" src="foto4.jpeg"></div>
+          <div class="bingkai"><img alt="Foto bersama tim di depan pangkalan gas" src="assets/foto4.jpeg"></div>
           <div class="card-body"><h3 class="h6 mb-0">Dokumentasi Bersama Tim di Lokasi</h3></div>
         </div></div>
         </div>
@@ -200,23 +200,6 @@
   </footer>
 
   <script src="js/bootstrap.bundle.min.js"></script>
-  <script>
-    document.getElementById('tahun').textContent = new Date().getFullYear();
-    
-    var io = new IntersectionObserver(function (daftar) {
-      daftar.forEach(function (i) { if (i.isIntersecting) { i.target.classList.add('tampil'); io.unobserve(i.target); } });
-    }, { threshold: .15 });
-    document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
-
-    window.onload = function () {
-      var gaya = getComputedStyle(document.documentElement), pesan = '';
-      if (!gaya.getPropertyValue('--bs-blue') || typeof bootstrap === 'undefined') pesan = 'Bootstrap belum termuat. Periksa nama file di folder css/ dan js/.';
-      else if (!gaya.getPropertyValue('--navy')) pesan = 'style.css belum termuat. Pastikan style.css satu folder dengan file HTML.';
-      if (pesan) document.body.insertAdjacentHTML('beforeend', '<div style="position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#b00020;color:#fff;padding:12px">' + pesan + '</div>');
-    };
-
-    var pita = document.querySelector('.pita-isi');
-    pita.innerHTML += pita.innerHTML;
-  </script>
+  <script src="js/script.js"></script>
 </body>
 </html>
